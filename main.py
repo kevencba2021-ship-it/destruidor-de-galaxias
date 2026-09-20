@@ -60,7 +60,7 @@ async def chat(body: Message):
         contents.append(types.Content(role="user", parts=[types.Part(text=body.message)]))
 
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-3.6-flash",
             contents=contents,
             config=types.GenerateContentConfig(system_instruction=SYSTEM)
         )
